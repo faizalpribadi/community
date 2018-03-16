@@ -127,8 +127,8 @@ Building a Flask app into a Docker image is relatively straightforward. The bigg
 
     FROM lyft/envoy:latest
     RUN apt-get update && apt-get -q install -y
-        curl
-        python-pip
+        curl \
+        python-pip \
         dnsutils
     WORKDIR /application
     COPY requirements.txt .
